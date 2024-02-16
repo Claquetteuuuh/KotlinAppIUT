@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Le formulaire trop cool les frr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="10pt"
+        android:id="@+id/textcool"
+        android:layout_marginVertical="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <ImageView
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/textcool"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/default_user"
+        android:id="@+id/peppapig" />
+
+    <EditText
+        android:minHeight="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prenom"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/peppapig"
+        android:id="@+id/prenom"/>
+    <EditText
+        android:minHeight="48dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/prenom"
+        android:id="@+id/nom"/>
+    <RadioGroup
+        android:layout_marginVertical="10dp"
+        android:id="@+id/radio"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Femme" />
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Homme" />
+
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Autre" />
+    </RadioGroup>
+    <EditText
+        android:minHeight="48dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date de naissance"
+        android:inputType="datetime"
+        app:layout_constraintTop_toBottomOf="@id/radio"
+        android:id="@+id/date"/>
+    <EditText
+        android:minHeight="48dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Numero"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/date"
+        android:id="@+id/phone"/>
+    <EditText
+        android:minHeight="48dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        android:id="@+id/email"/>
+    <CheckBox
+        android:backgroundTint="@color/dark_blue"
+        android:buttonTint="@color/dark_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter au favoris"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:checked="true"
+        android:id="@+id/favoris"
+        />
+    <Button
+        android:textColor="@color/white"
+        android:backgroundTint="@color/dark_blue"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valide ici !"
+        app:layout_constraintTop_toBottomOf="@id/favoris"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
